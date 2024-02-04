@@ -40,7 +40,7 @@
                         <input type="text" id="author" required>
                     </div>
                 </div>
-                <div class="col-3 py-2">
+                <div class="col-auto-2 py-2">
                     <button type="button" onclick="addNewBook()">Add Book</button>
                 </div>
         </div>
@@ -50,10 +50,18 @@
     <div class="d-flex flex-column p-3">
         <h3>Checkout Book</h3>
         <form id="removeForm">
-            <label for="title">Title:</label>
-            <input type="text" id="checkoutTitle" required>
-
-            <button type="button" onclick="removeBook()">Checkout</button>
+            <div class="d-flex flex-column">
+                <div class="row">
+                    <div class="col-auto-2 py-2">
+                        <label for="title">Title:</label>
+                    <div class="col-auto-2 py-2">
+                        <input type="text" id="checkoutTitle" required>
+                    </div>
+                    <div class="col-auto-2 py-2">
+                        <button type="button" onclick="removeBook()">Checkout</button>
+                    </div>
+                </div>
+            </div>
         </form>
     </div>
 
