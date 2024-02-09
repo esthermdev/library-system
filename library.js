@@ -99,10 +99,12 @@ function displayBooks() {
     bookList.innerHTML = " ";
 
     library.books.forEach(book => {
-        const listItem = document.createElement('li');
-        listItem.classList.add('list-group-item', 'book-item');
-        listItem.textContent = `Title: ${book.title}, Author: ${book.author}`;
-        bookList.appendChild(listItem);
+        if (book.available) {
+            const listItem = document.createElement('li');
+            listItem.classList.add('list-group-item', 'book-item');
+            listItem.textContent = `Title: ${book.title}, Author: ${book.author}`;
+            bookList.appendChild(listItem);
+        }
     });
 }
 
